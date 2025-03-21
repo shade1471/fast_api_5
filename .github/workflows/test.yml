@@ -18,15 +18,15 @@ jobs:
           cache: 'pip'
       - name: Install dependencies
         run: pip install --upgrade -r requirements.txt
-      - name: Docker build..
+      - name: Docker build
         run: docker compose build
-      - name: run Docker compose..
+      - name: run Docker compose
         run: docker compose up -d && sleep 5
-      - name: Run tests..
+      - name: Run tests
         run: pytest tests --junit-xml=test-results.xml
         env:
           APP_URL: http://127.0.0.1:8000
-          DATABASE_ENGINE: postgresql+psycopg2://$POSTGRES_USER:$POSTGRES_PASSWORD@localhost:5432/$POSTGRES_USER
+          DATABASE_ENGINE: postgresql+psycopg2://${{env.POSTGRES_USER}}:${{env.POSTGRES_PASSWORD}}@localhost:5432/${{env.POSTGRES_USER}}
 
       - run: docker compose logs app
         if: always()
