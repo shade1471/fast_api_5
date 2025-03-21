@@ -5,7 +5,7 @@ on:
 
 jobs:
   tests:
-    name: Test app
+    name: Test fastAPI-app
     runs-on: ubuntu-latest
     env:
       POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
