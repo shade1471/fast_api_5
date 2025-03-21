@@ -1,9 +1,5 @@
 import os
 
-import dotenv
-
-dotenv.load_dotenv()
-
 from sqlalchemy.orm import Session
 from sqlmodel import create_engine, SQLModel, text
 
