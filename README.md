@@ -1,4 +1,4 @@
-# FastApi + Python, QA-Guru intro
+# FastApi + Python, QA-Guru
 
 Микросервис на Python + FastAPI
 
