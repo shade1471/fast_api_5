@@ -1,6 +1,6 @@
 # FastApi + Python, QA-Guru
 
-Микросервис на Python + FastAPI!
+Микросервис на Python + FastAPI
 
 ## Установка
 
